@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MF0 version="1.1" packageUris="http://schema.mathworks.com/mf0/slsa_mm_param_rtp/R2023a">
+  <slsa.mm.param.rtp.BlockParameterId type="slsa.mm.param.rtp.BlockParameterId" uuid="14494c51-8b12-4307-afe8-a0282c372eea">
+    <blockPath>EnergyHub_V2/Battery/Battery/Model/Continuous/constantB</blockPath>
+    <name>Value</name>
+    <parameter type="slsa.mm.param.rtp.Parameter" uuid="c524b337-762f-48e9-887f-a0dd9886651d"/>
+  </slsa.mm.param.rtp.BlockParameterId>
+  <slsa.mm.param.rtp.RtpLocation type="slsa.mm.param.rtp.RtpLocation" uuid="d66bcaa5-e953-465b-9fff-12b6bb59843b">
+    <parameter type="slsa.mm.param.rtp.Parameter" uuid="8389d96d-2dd9-4181-8881-4b909734480f"/>
+    <valueIndices>1159403</valueIndices>
+    <valueIndices>1159403</valueIndices>
+  </slsa.mm.param.rtp.RtpLocation>
+  <slsa.mm.param.rtp.BlockParameterId type="slsa.mm.param.rtp.BlockParameterId" uuid="39e1da48-4866-4620-a673-1bc3478a31f0">
+    <blockPath>EnergyHub_V2/Battery/Battery/Model/Continuous/constantA</blockPath>
+    <name>Value</name>
+    <parameter type="slsa.mm.param.rtp.Parameter" uuid="8389d96d-2dd9-4181-8881-4b909734480f"/>
+  </slsa.mm.param.rtp.BlockParameterId>
+  <slsa.mm.param.rtp.Parameter type="slsa.mm.param.rtp.Parameter" uuid="2dcc9ba0-c20c-4755-b35a-8bd9f7fc4766">
+    <id type="slsa.mm.param.rtp.BlockParameterId" uuid="a7898aea-53dd-4150-935e-151c9ca37390"/>
+    <rtpLocation type="slsa.mm.param.rtp.RtpLocation" uuid="bc22ee8d-9676-44b9-9f0d-af0a0db4a44c"/>
+  </slsa.mm.param.rtp.Parameter>
+  <slsa.mm.param.rtp.Parameter type="slsa.mm.param.rtp.Parameter" uuid="a030d648-1b22-47ac-80f8-245ef6aa6a9a">
+    <id type="slsa.mm.param.rtp.BlockParameterId" uuid="2dd6237f-2b91-41e4-9577-9c9f176db108"/>
+    <rtpLocation type="slsa.mm.param.rtp.RtpLocation" uuid="4d5bb460-e5eb-4c0a-a010-607955c7245c"/>
+  </slsa.mm.param.rtp.Parameter>
+  <slsa.mm.param.rtp.BlockParameterId type="slsa.mm.param.rtp.BlockParameterId" uuid="7bec9aec-bac6-4571-aa8e-de4451ca53cf">
+    <blockPath>EnergyHub_V2/Battery/Battery/Model/Continuous/Exponential Zone Voltage/Gain</blockPath>
+    <name>Gain</name>
+    <parameter type="slsa.mm.param.rtp.Parameter" uuid="27588bea-998a-4b1c-baa0-310a2642b075"/>
+  </slsa.mm.param.rtp.BlockParameterId>
+  <slsa.mm.param.rtp.RtpLocation type="slsa.mm.param.rtp.RtpLocation" uuid="431267ea-2860-4bce-96f6-b11a639f4122">
+    <parameter type="slsa.mm.param.rtp.Parameter" uuid="72f9fa71-534b-4273-9d54-ab9b9c763498"/>
+    <valueIndices>1159401</valueIndices>
+    <valueIndices>1159401</valueIndices>
+  </slsa.mm.param.rtp.RtpLocation>
+  <slsa.mm.param.rtp.BlockParameterId type="slsa.mm.param.rtp.BlockParameterId" uuid="0e486929-d74e-4981-a0d5-8daae8643761">
+    <blockPath>EnergyHub_V2/Battery/Battery/Model/Continuous/capacity</blockPath>
+    <name>Value</name>
+    <parameter type="slsa.mm.param.rtp.Parameter" uuid="72f9fa71-534b-4273-9d54-ab9b9c763498"/>
+  </slsa.mm.param.rtp.BlockParameterId>
+  <slsa.mm.param.rtp.BlockParameterId type="slsa.mm.param.rtp.BlockParameterId" uuid="949beac4-a710-4157-ae74-a75151684a33">
+    <blockPath>EnergyHub_V2/Battery/powergui/EquivalentModel1/State-Space</blockPath>
+    <name>P2</name>
+    <parameter type="slsa.mm.param.rtp.SFunctionParameter" uuid="5669bb84-3201-4257-b507-216a799bad92"/>
+  </slsa.mm.param.rtp.BlockParameterId>
+  <slsa.mm.param.rtp.RtpLocation type="slsa.mm.param.rtp.RtpLocation" uuid="e414d64b-8f66-4bf1-a92e-ab368a0f7129">
+    <parameter type="slsa.mm.param.rtp.Parameter" uuid="565aed47-05cc-44cf-9bec-a9cd4262ae12"/>
+    <valueIndices>1159400</valueIndices>
+    <valueIndices>1159400</valueIndices>
+  </slsa.mm.param.rtp.RtpLocation>
+  <slsa.mm.param.rtp.BlockParameterId type="slsa.mm.param.rtp.BlockParameterId" uuid="94e6f4be-97d2-423f-9651-6fe983c862c7">
+    <blockPath>EnergyHub_V2/Battery/Battery/Model/Continuous/Constant1</blockPath>
+    <name>Value</name>
+    <parameter type="slsa.mm.param.rtp.Parameter" uuid="565aed47-05cc-44cf-9bec-a9cd4262ae12"/>
+  </slsa.mm.param.rtp.BlockParameterId>
+  <slsa.mm.param.rtp.RtpLocation type="slsa.mm.param.rtp.RtpLocation" uuid="b0f87c90-3993-474f-a0b0-8190eac15938">
+    <parameter type="slsa.mm.param.rtp.Parameter" uuid="8e9ddbb3-27a0-48fd-830f-9e8853a90d06"/>
+    <valueIndices>1159399</valueIndices>
+    <valueIndices>1159399</valueIndices>
+  </slsa.mm.param.rtp.RtpLocation>
+  <slsa.mm.param.rtp.Parameter type="slsa.mm.param.rtp.Parameter" uuid="8e9ddbb3-27a0-48fd-830f-9e8853a90d06">
+    <id type="slsa.mm.param.rtp.BlockParameterId" uuid="51973bb6-fe64-4c05-9ffc-2e8a577ed216"/>
+    <rtpLocation type="slsa.mm.param.rtp.RtpLocation" uuid="b0f87c90-3993-474f-a0b0-8190eac15938"/>
+  </slsa.mm.param.rtp.Parameter>
+  <slsa.mm.param.rtp.BlockParameterId type="slsa.mm.param.rtp.BlockParameterId" uuid="51973bb6-fe64-4c05-9ffc-2e8a577ed216">
+    <blockPath>EnergyHub_V2/Battery/Battery/Model/Continuous/Constant</blockPath>
+    <name>Value</name>
+    <parameter type="slsa.mm.param.rtp.Parameter" uuid="8e9ddbb3-27a0-48fd-830f-9e8853a90d06"/>
+  </slsa.mm.param.rtp.BlockParameterId>
+  <slsa.mm.param.rtp.Parameter type="slsa.mm.param.rtp.Parameter" uuid="63a2cd2c-117d-4957-8ede-34ec4ce37e5b">
+    <id type="slsa.mm.param.rtp.BlockParameterId" uuid="415f7e10-0f4d-4068-8170-44da0f939832"/>
+    <rtpLocation type="slsa.mm.param.rtp.RtpLocation" uuid="e534d614-4e15-4199-89a7-59e1d9f399b3"/>
+  </slsa.mm.param.rtp.Parameter>
+  <slsa.mm.param.rtp.RtpLocation type="slsa.mm.param.rtp.RtpLocation" uuid="3f558186-e01f-42ec-ba88-617636b58ccf">
+    <parameter type="slsa.mm.param.rtp.Parameter" uuid="27588bea-998a-4b1c-baa0-310a2642b075"/>
+    <valueIndices>105335</valueIndices>
+    <valueIndices>105335</valueIndices>
+  </slsa.mm.param.rtp.RtpLocation>
+  <slsa.mm.param.rtp.Parameter type="slsa.mm.param.rtp.Parameter" uuid="27588bea-998a-4b1c-baa0-310a2642b075">
+    <id type="slsa.mm.param.rtp.BlockParameterId" uuid="7bec9aec-bac6-4571-aa8e-de4451ca53cf"/>
+    <rtpLocation type="slsa.mm.param.rtp.RtpLocation" uuid="3f558186-e01f-42ec-ba88-617636b58ccf"/>
+  </slsa.mm.param.rtp.Parameter>
+  <slsa.mm.param.rtp.BlockParameterId type="slsa.mm.param.rtp.BlockParameterId" uuid="0d78a565-9cc0-48a1-a071-d61021413b09">
+    <blockPath>EnergyHub_V2/Battery/Battery/Model/Continuous/Gain</blockPath>
+    <name>Gain</name>
+    <parameter type="slsa.mm.param.rtp.Parameter" uuid="24717c37-f6e0-4528-95c9-f635bfcb0cde"/>
+  </slsa.mm.param.rtp.BlockParameterId>
+  <slsa.mm.param.rtp.RtpLocation type="slsa.mm.param.rtp.RtpLocation" uuid="bc22ee8d-9676-44b9-9f0d-af0a0db4a44c">
+    <parameter type="slsa.mm.param.rtp.Parameter" uuid="2dcc9ba0-c20c-4755-b35a-8bd9f7fc4766"/>
+    <valueIndices>105333</valueIndices>
+    <valueIndices>105333</valueIndices>
+  </slsa.mm.param.rtp.RtpLocation>
+  <slsa.mm.param.rtp.SFunctionParameter type="slsa.mm.param.rtp.SFunctionParameter" uuid="5669bb84-3201-4257-b507-216a799bad92">
+    <id type="slsa.mm.param.rtp.BlockParameterId" uuid="949beac4-a710-4157-ae74-a75151684a33"/>
+    <rtpLocation type="slsa.mm.param.rtp.RtpLocation" uuid="8f7b2811-f50b-4d53-bfca-ba985e982fa2"/>
+  </slsa.mm.param.rtp.SFunctionParameter>
+  <slsa.mm.param.rtp.BlockParameterId type="slsa.mm.param.rtp.BlockParameterId" uuid="6cf46f16-06fe-42ce-a10a-fad2ceba9c2e">
+    <blockPath>EnergyHub_V2/Battery/Battery/Model/Continuous/Coulomb Counter</blockPath>
+    <name>UpperSaturationLimit</name>
+    <parameter type="slsa.mm.param.rtp.Parameter" uuid="22517cea-538c-4687-be56-8db20e610528"/>
+  </slsa.mm.param.rtp.BlockParameterId>
+  <slsa.mm.param.rtp.BlockParameterId type="slsa.mm.param.rtp.BlockParameterId" uuid="a7898aea-53dd-4150-935e-151c9ca37390">
+    <blockPath>EnergyHub_V2/Battery/Battery/Model/Continuous/Exponential Zone Voltage/Integrator2</blockPath>
+    <name>InitialCondition</name>
+    <parameter type="slsa.mm.param.rtp.Parameter" uuid="2dcc9ba0-c20c-4755-b35a-8bd9f7fc4766"/>
+  </slsa.mm.param.rtp.BlockParameterId>
+  <slsa.mm.param.rtp.RtpLocation type="slsa.mm.param.rtp.RtpLocation" uuid="4d5bb460-e5eb-4c0a-a010-607955c7245c">
+    <parameter type="slsa.mm.param.rtp.Parameter" uuid="a030d648-1b22-47ac-80f8-245ef6aa6a9a"/>
+    <valueIndices>1159402</valueIndices>
+    <valueIndices>1159402</valueIndices>
+  </slsa.mm.param.rtp.RtpLocation>
+  <slsa.mm.param.rtp.Parameter type="slsa.mm.param.rtp.Parameter" uuid="24717c37-f6e0-4528-95c9-f635bfcb0cde">
+    <id type="slsa.mm.param.rtp.BlockParameterId" uuid="0d78a565-9cc0-48a1-a071-d61021413b09"/>
+    <rtpLocation type="slsa.mm.param.rtp.RtpLocation" uuid="4c0b57a9-2cbe-4645-b267-41668c4c0da1"/>
+  </slsa.mm.param.rtp.Parameter>
+  <slsa.mm.param.rtp.Parameter type="slsa.mm.param.rtp.Parameter" uuid="9f467e5c-eb8e-444e-a1f6-a816d9dfe188">
+    <id type="slsa.mm.param.rtp.BlockParameterId" uuid="c02e2b1d-1c86-485b-80a3-4cd9c0c5705b"/>
+    <rtpLocation type="slsa.mm.param.rtp.RtpLocation" uuid="44f9a77b-9bd5-481c-b477-155cb9282119"/>
+  </slsa.mm.param.rtp.Parameter>
+  <slsa.mm.param.rtp.BlockParameterId type="slsa.mm.param.rtp.BlockParameterId" uuid="7cfe737e-b00d-4652-864d-5f7b57e4c7b4">
+    <blockPath>EnergyHub_V2/Battery/powergui/EquivalentModel1/State-Space</blockPath>
+    <name>P4</name>
+    <parameter type="slsa.mm.param.rtp.SFunctionParameter" uuid="ece53fee-cd06-411a-8cd3-ba357d34e83c"/>
+  </slsa.mm.param.rtp.BlockParameterId>
+  <slsa.mm.param.rtp.SFunctionParameter type="slsa.mm.param.rtp.SFunctionParameter" uuid="ece53fee-cd06-411a-8cd3-ba357d34e83c">
+    <id type="slsa.mm.param.rtp.BlockParameterId" uuid="7cfe737e-b00d-4652-864d-5f7b57e4c7b4"/>
+    <rtpLocation type="slsa.mm.param.rtp.RtpLocation" uuid="1ed950cf-d3b0-40ff-86b6-067dd3b89446"/>
+  </slsa.mm.param.rtp.SFunctionParameter>
+  <slsa.mm.param.rtp.RtpLocation type="slsa.mm.param.rtp.RtpLocation" uuid="925b028e-b371-4a4f-a389-bef6b795ef75">
+    <parameter type="slsa.mm.param.rtp.Parameter" uuid="6c97bf73-4fbf-4d93-b186-d88bb60f2388"/>
+    <valueIndices>12</valueIndices>
+    <valueIndices>12</valueIndices>
+  </slsa.mm.param.rtp.RtpLocation>
+  <slsa.mm.param.rtp.Parameter type="slsa.mm.param.rtp.Parameter" uuid="565aed47-05cc-44cf-9bec-a9cd4262ae12">
+    <id type="slsa.mm.param.rtp.BlockParameterId" uuid="94e6f4be-97d2-423f-9651-6fe983c862c7"/>
+    <rtpLocation type="slsa.mm.param.rtp.RtpLocation" uuid="e414d64b-8f66-4bf1-a92e-ab368a0f7129"/>
+  </slsa.mm.param.rtp.Parameter>
+  <slsa.mm.param.rtp.RtpLocation type="slsa.mm.param.rtp.RtpLocation" uuid="8f7b2811-f50b-4d53-bfca-ba985e982fa2">
+    <parameter type="slsa.mm.param.rtp.SFunctionParameter" uuid="5669bb84-3201-4257-b507-216a799bad92"/>
+    <valueIndices>105154</valueIndices>
+    <valueIndices>105157</valueIndices>
+  </slsa.mm.param.rtp.RtpLocation>
+  <slsa.mm.param.rtp.BlockParameterId type="slsa.mm.param.rtp.BlockParameterId" uuid="2dd6237f-2b91-41e4-9577-9c9f176db108">
+    <blockPath>EnergyHub_V2/Battery/Battery/Model/Continuous/constantK</blockPath>
+    <name>Value</name>
+    <parameter type="slsa.mm.param.rtp.Parameter" uuid="a030d648-1b22-47ac-80f8-245ef6aa6a9a"/>
+  </slsa.mm.param.rtp.BlockParameterId>
+  <slsa.mm.param.rtp.RtpLocation type="slsa.mm.param.rtp.RtpLocation" uuid="2b0d28af-b945-49ca-b713-7a42088daf46">
+    <parameter type="slsa.mm.param.rtp.SFunctionParameter" uuid="0c144cc2-e0a7-4bc0-acb9-3e7929ff5462"/>
+    <valueIndices>105149</valueIndices>
+    <valueIndices>105151</valueIndices>
+  </slsa.mm.param.rtp.RtpLocation>
+  <slsa.mm.param.rtp.BlockParameterId type="slsa.mm.param.rtp.BlockParameterId" uuid="9a9a32ab-02e7-42c2-9eac-56ff5750c26b">
+    <blockPath>EnergyHub_V2/Battery/powergui/EquivalentModel1/State-Space</blockPath>
+    <name>P1</name>
+    <parameter type="slsa.mm.param.rtp.SFunctionParameter" uuid="0c144cc2-e0a7-4bc0-acb9-3e7929ff5462"/>
+  </slsa.mm.param.rtp.BlockParameterId>
+  <slsa.mm.param.rtp.Parameter type="slsa.mm.param.rtp.Parameter" uuid="c524b337-762f-48e9-887f-a0dd9886651d">
+    <id type="slsa.mm.param.rtp.BlockParameterId" uuid="14494c51-8b12-4307-afe8-a0282c372eea"/>
+    <rtpLocation type="slsa.mm.param.rtp.RtpLocation" uuid="0b6eeeff-3a2e-4fcd-aff3-c84fea196cc9"/>
+  </slsa.mm.param.rtp.Parameter>
+  <slsa.mm.param.rtp.SFunctionParameter type="slsa.mm.param.rtp.SFunctionParameter" uuid="0c144cc2-e0a7-4bc0-acb9-3e7929ff5462">
+    <id type="slsa.mm.param.rtp.BlockParameterId" uuid="9a9a32ab-02e7-42c2-9eac-56ff5750c26b"/>
+    <rtpLocation type="slsa.mm.param.rtp.RtpLocation" uuid="2b0d28af-b945-49ca-b713-7a42088daf46"/>
+  </slsa.mm.param.rtp.SFunctionParameter>
+  <slsa.mm.param.rtp.RtpLocation type="slsa.mm.param.rtp.RtpLocation" uuid="4c0b57a9-2cbe-4645-b267-41668c4c0da1">
+    <parameter type="slsa.mm.param.rtp.Parameter" uuid="24717c37-f6e0-4528-95c9-f635bfcb0cde"/>
+    <valueIndices>105334</valueIndices>
+    <valueIndices>105334</valueIndices>
+  </slsa.mm.param.rtp.RtpLocation>
+  <slsa.mm.param.rtp.ModelMetadata type="slsa.mm.param.rtp.ModelMetadata" uuid="3e04c30a-d433-4ac0-ba34-347fb8260e50">
+    <modelName>EnergyHub_V2</modelName>
+  </slsa.mm.param.rtp.ModelMetadata>
+  <slsa.mm.param.rtp.BlockParameterId type="slsa.mm.param.rtp.BlockParameterId" uuid="415f7e10-0f4d-4068-8170-44da0f939832">
+    <blockPath>EnergyHub_V2/Battery/Battery/Model/Continuous/Exponential Zone Voltage/Gain1</blockPath>
+    <name>Gain</name>
+    <parameter type="slsa.mm.param.rtp.Parameter" uuid="63a2cd2c-117d-4957-8ede-34ec4ce37e5b"/>
+  </slsa.mm.param.rtp.BlockParameterId>
+  <slsa.mm.param.rtp.Parameter type="slsa.mm.param.rtp.Parameter" uuid="8389d96d-2dd9-4181-8881-4b909734480f">
+    <id type="slsa.mm.param.rtp.BlockParameterId" uuid="39e1da48-4866-4620-a673-1bc3478a31f0"/>
+    <rtpLocation type="slsa.mm.param.rtp.RtpLocation" uuid="d66bcaa5-e953-465b-9fff-12b6bb59843b"/>
+  </slsa.mm.param.rtp.Parameter>
+  <slsa.mm.param.rtp.RtpLocation type="slsa.mm.param.rtp.RtpLocation" uuid="e11f85f3-4016-4e69-9606-0a6e9f8a0cef">
+    <parameter type="slsa.mm.param.rtp.Parameter" uuid="22517cea-538c-4687-be56-8db20e610528"/>
+    <valueIndices>13</valueIndices>
+    <valueIndices>13</valueIndices>
+  </slsa.mm.param.rtp.RtpLocation>
+  <slsa.mm.param.rtp.Parameter type="slsa.mm.param.rtp.Parameter" uuid="72f9fa71-534b-4273-9d54-ab9b9c763498">
+    <id type="slsa.mm.param.rtp.BlockParameterId" uuid="0e486929-d74e-4981-a0d5-8daae8643761"/>
+    <rtpLocation type="slsa.mm.param.rtp.RtpLocation" uuid="431267ea-2860-4bce-96f6-b11a639f4122"/>
+  </slsa.mm.param.rtp.Parameter>
+  <slsa.mm.param.rtp.Parameter type="slsa.mm.param.rtp.Parameter" uuid="22517cea-538c-4687-be56-8db20e610528">
+    <id type="slsa.mm.param.rtp.BlockParameterId" uuid="6cf46f16-06fe-42ce-a10a-fad2ceba9c2e"/>
+    <rtpLocation type="slsa.mm.param.rtp.RtpLocation" uuid="e11f85f3-4016-4e69-9606-0a6e9f8a0cef"/>
+  </slsa.mm.param.rtp.Parameter>
+  <slsa.mm.param.rtp.RtpLocation type="slsa.mm.param.rtp.RtpLocation" uuid="1ed950cf-d3b0-40ff-86b6-067dd3b89446">
+    <parameter type="slsa.mm.param.rtp.SFunctionParameter" uuid="ece53fee-cd06-411a-8cd3-ba357d34e83c"/>
+    <valueIndices>105162</valueIndices>
+    <valueIndices>105299</valueIndices>
+  </slsa.mm.param.rtp.RtpLocation>
+  <slsa.mm.param.rtp.RtpLocation type="slsa.mm.param.rtp.RtpLocation" uuid="e534d614-4e15-4199-89a7-59e1d9f399b3">
+    <parameter type="slsa.mm.param.rtp.Parameter" uuid="63a2cd2c-117d-4957-8ede-34ec4ce37e5b"/>
+    <valueIndices>105336</valueIndices>
+    <valueIndices>105336</valueIndices>
+  </slsa.mm.param.rtp.RtpLocation>
+  <slsa.mm.param.rtp.RtpLocation type="slsa.mm.param.rtp.RtpLocation" uuid="0b6eeeff-3a2e-4fcd-aff3-c84fea196cc9">
+    <parameter type="slsa.mm.param.rtp.Parameter" uuid="c524b337-762f-48e9-887f-a0dd9886651d"/>
+    <valueIndices>1159404</valueIndices>
+    <valueIndices>1159404</valueIndices>
+  </slsa.mm.param.rtp.RtpLocation>
+  <slsa.mm.param.rtp.BlockParameterId type="slsa.mm.param.rtp.BlockParameterId" uuid="c1097398-7af8-4b19-a248-661b07e88c7e">
+    <blockPath>EnergyHub_V2/Battery/Battery/Model/Continuous/Initial it</blockPath>
+    <name>InitialCondition</name>
+    <parameter type="slsa.mm.param.rtp.Parameter" uuid="6c97bf73-4fbf-4d93-b186-d88bb60f2388"/>
+  </slsa.mm.param.rtp.BlockParameterId>
+  <slsa.mm.param.rtp.RtpLocation type="slsa.mm.param.rtp.RtpLocation" uuid="44f9a77b-9bd5-481c-b477-155cb9282119">
+    <parameter type="slsa.mm.param.rtp.Parameter" uuid="9f467e5c-eb8e-444e-a1f6-a816d9dfe188"/>
+    <valueIndices>18</valueIndices>
+    <valueIndices>18</valueIndices>
+  </slsa.mm.param.rtp.RtpLocation>
+  <slsa.mm.param.rtp.Parameter type="slsa.mm.param.rtp.Parameter" uuid="6c97bf73-4fbf-4d93-b186-d88bb60f2388">
+    <id type="slsa.mm.param.rtp.BlockParameterId" uuid="c1097398-7af8-4b19-a248-661b07e88c7e"/>
+    <rtpLocation type="slsa.mm.param.rtp.RtpLocation" uuid="925b028e-b371-4a4f-a389-bef6b795ef75"/>
+  </slsa.mm.param.rtp.Parameter>
+  <slsa.mm.param.rtp.BlockParameterId type="slsa.mm.param.rtp.BlockParameterId" uuid="c02e2b1d-1c86-485b-80a3-4cd9c0c5705b">
+    <blockPath>EnergyHub_V2/Battery/Battery/Model/Continuous/Saturation</blockPath>
+    <name>UpperLimit</name>
+    <parameter type="slsa.mm.param.rtp.Parameter" uuid="9f467e5c-eb8e-444e-a1f6-a816d9dfe188"/>
+  </slsa.mm.param.rtp.BlockParameterId>
+</MF0>

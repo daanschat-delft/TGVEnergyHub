@@ -1,0 +1,88 @@
+%implements "chartSource" "C"
+%function ChartConfig(block, system) void
+  %createrecord chartConfiguration { ...
+          executeAtInitialization  0 ...
+  }
+  %return chartConfiguration
+%endfunction
+%function ChartDataMap(block, system) void
+  %createrecord ChartDataElements {\
+    NumChartData   10 \
+    ChartDataDefaults {\
+      RecordType   "ChartData"\
+      Dimensions   []\
+      IsTestPoint  0\
+    }\
+    ChartData {\
+      Name         "sfEvent"\
+      Description  "ActiveChartEvent"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "doneDoubleBufferReInit"\
+      Description  "DoubleBufferInitCheck"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "hasRunToday"\
+      Description  "EmlPersistent"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "EnergyHub_V2:198:495-506"\
+    }\
+    ChartData {\
+      Name         "hasRunToday_not_empty"\
+      Description  "EmlPersistentSentinel"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "EnergyHub_V2:198:495-506"\
+    }\
+    ChartData {\
+      Name         "lastDay"\
+      Description  "EmlPersistent"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "EnergyHub_V2:198:572-579"\
+    }\
+    ChartData {\
+      Name         "lastDay_not_empty"\
+      Description  "EmlPersistentSentinel"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "EnergyHub_V2:198:572-579"\
+    }\
+    ChartData {\
+      Name         "isElectrolyzerOn"\
+      Description  "EmlPersistent"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "EnergyHub_V2:198:643-659"\
+    }\
+    ChartData {\
+      Name         "isElectrolyzerOn_not_empty"\
+      Description  "EmlPersistentSentinel"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "EnergyHub_V2:198:643-659"\
+    }\
+    ChartData {\
+      Name         "currentControlLevel"\
+      Description  "EmlPersistent"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "EnergyHub_V2:198:716-735"\
+    }\
+    ChartData {\
+      Name         "currentControlLevel_not_empty"\
+      Description  "EmlPersistentSentinel"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "EnergyHub_V2:198:716-735"\
+    }\
+  }
+  %return ChartDataElements
+%endfunction

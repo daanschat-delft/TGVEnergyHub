@@ -1,0 +1,116 @@
+%implements "chartSource" "C"
+%function ChartConfig(block, system) void
+  %createrecord chartConfiguration { ...
+          executeAtInitialization  0 ...
+  }
+  %return chartConfiguration
+%endfunction
+%function ChartDataMap(block, system) void
+  %createrecord ChartDataElements {\
+    NumChartData   14 \
+    ChartDataDefaults {\
+      RecordType   "ChartData"\
+      Dimensions   []\
+      IsTestPoint  0\
+    }\
+    ChartData {\
+      Name         "sfEvent"\
+      Description  "ActiveChartEvent"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "doneDoubleBufferReInit"\
+      Description  "DoubleBufferInitCheck"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "startTime"\
+      Description  "EmlPersistent"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "EnergyHub_V2:327:817-826"\
+    }\
+    ChartData {\
+      Name         "startTime_not_empty"\
+      Description  "EmlPersistentSentinel"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "EnergyHub_V2:327:817-826"\
+    }\
+    ChartData {\
+      Name         "isRampActive"\
+      Description  "EmlPersistent"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "EnergyHub_V2:327:827-839"\
+    }\
+    ChartData {\
+      Name         "isRampActive_not_empty"\
+      Description  "EmlPersistentSentinel"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "EnergyHub_V2:327:827-839"\
+    }\
+    ChartData {\
+      Name         "stopTime"\
+      Description  "EmlPersistent"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "EnergyHub_V2:327:840-848"\
+    }\
+    ChartData {\
+      Name         "stopTime_not_empty"\
+      Description  "EmlPersistentSentinel"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "EnergyHub_V2:327:840-848"\
+    }\
+    ChartData {\
+      Name         "isRampingDown"\
+      Description  "EmlPersistent"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "EnergyHub_V2:327:849-862"\
+    }\
+    ChartData {\
+      Name         "isRampingDown_not_empty"\
+      Description  "EmlPersistentSentinel"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "EnergyHub_V2:327:849-862"\
+    }\
+    ChartData {\
+      Name         "currentPower"\
+      Description  "EmlPersistent"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "EnergyHub_V2:327:863-875"\
+    }\
+    ChartData {\
+      Name         "currentPower_not_empty"\
+      Description  "EmlPersistentSentinel"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "EnergyHub_V2:327:863-875"\
+    }\
+    ChartData {\
+      Name         "currentHydrogen"\
+      Description  "EmlPersistent"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "EnergyHub_V2:327:876-891"\
+    }\
+    ChartData {\
+      Name         "currentHydrogen_not_empty"\
+      Description  "EmlPersistentSentinel"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "EnergyHub_V2:327:876-891"\
+    }\
+  }
+  %return ChartDataElements
+%endfunction
