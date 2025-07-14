@@ -24,12 +24,23 @@
 %[param1_grid, param2_grid] = ndgrid(EMSFCStartSoC, EMSFCStopSoC);
 
 
-% Improved test 1:
-SolarPanels         = 12;
-BatteryCapacity     = 2*15.36;    % [kWh]
-BatteryVNom         = 51.2;     % [V]
-BatteryInitialSoC   = 50;       % [%]
-BatteryCapacity     = 1000*BatteryCapacity/BatteryVNom; % [Ah]
+% Improved tests:
+%SolarPanels         = 19;
+%BatteryCapacity     = 2*15.36;    % [kWh]
+%BatteryVNom         = 51.2;     % [V]
+%BatteryInitialSoC   = 50;       % [%]
+%BatteryCapacity     = 1000*BatteryCapacity/BatteryVNom; % [Ah]
+
+
+%Entire TGV campus:
+%SolarPanels = 21;
+%BatteryCapacity     = 2*15.36;    % [kWh]
+%BatteryVNom         = 51.2;     % [V]
+%BatteryInitialSoC   = 50;       % [%]
+%BatteryCapacity     = 1000*BatteryCapacity/BatteryVNom; % [Ah]
+%[param1_grid, param2_grid] = ndgrid(SolarPanels, BatteryCapacity);
+
+
 [param1_grid, param2_grid] = ndgrid(SolarPanels, BatteryCapacity);
 
 
@@ -62,8 +73,8 @@ for i = 1:num_simulations
     %assignin('base', 'EMSFCStopSoC', param2);
     
     %simOut = sim('EnergyHub_V5_inf_buffer.slx');
-    simOut = sim('EnergyHub_V5.slx');
-    %simOut = sim('EnergyHub_V5_impr.slx');
+    %simOut = sim('EnergyHub_V5.slx');
+    simOut = sim('EnergyHub_V5_impr.slx');
     
     results.param1 =             param1;
     results.param2 =             param2;
@@ -84,10 +95,11 @@ for i = 1:num_simulations
             i, num_simulations, datestr(simtime, 'HH:MM:SS'));
     %filename = sprintf('EMS_FCTest_%d_StartSoC_%d_StopSoC.mat', param1, param2);
     %filename = sprintf('InfHydrogen%d_Panels_%d_Ah.mat', param1, param2);
-    filename = sprintf('NoHydrogenIntegration%d_Panels_%d_Ah.mat', param1, param2);
+    %filename = sprintf('NoHydrogenIntegration%d_Panels_%d_Ah.mat', param1, param2);
     %filename = sprintf('EMS_Test_%d_StartSoC_%d_StartHr.mat', param1, param2);
     %filename = sprintf('EMS_Test_%d_StartSoC_%d_StopSoC.mat', param1, param2);
-    %filename = sprintf('IMPR_V4_EnergyHub_%d_PVPanels_%d_Ah_Battery.mat', param1, param2);
+    %filename = sprintf('Edge_PV_V1_EnergyHub_%d_PVPanels_%d_Ah_Battery.mat', param1, param2);
+    filename = sprintf('Entire_TGV_Campus_%d_Panels_%d_Battery.mat', param1, param2);
     save(filename, 'results', '-v7.3')
 
 end

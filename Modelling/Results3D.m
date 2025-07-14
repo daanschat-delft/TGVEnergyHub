@@ -1,8 +1,8 @@
 %% Results of the sizing tests
 
+TitleSize = 20;
+FontSize = 18;
 
-TitleSize = 18;
-FontSize = 14;
 cmap = parula(10);
 foldername = 'Output/3D_Out';
 
@@ -35,10 +35,10 @@ Z = reshape(grid_pulled, size(param1_grid));
 
 figure;
 surf(panels, battery, Z');
-xlabel('Number of Panels');
-ylabel('Battery Capacity [kWh]');
-zlabel('Grid Energy [kWh]');
-title('Pulled energy from the grid vs. battery capacity and solar panels');
+xlabel('Number of Panels', 'FontSize', FontSize);
+ylabel('Battery cap. [kWh]', 'FontSize', FontSize);
+zlabel('Grid Energy [kWh]', 'FontSize', FontSize);
+title('Pulled grid energy vs. battery cap. & PV panels', 'FontSize', TitleSize);
 
 colormap(parula);          % Vibrant colormap
 colorbar;                 % Show color scale
@@ -46,7 +46,7 @@ camlight headlight;       % Add lighting
 lighting gouraud;         % Soft lighting model
 view(135, 30);            % Set a good viewing angle
 
-filename = '3D_Sizing_GridPulled.png';
+filename = 'Big_3D_Sizing_GridPulled.png';
 ax.Toolbar = [];
 saveas(gcf, fullfile(foldername, filename));
 
@@ -57,10 +57,10 @@ Z = reshape(grid_delivered, size(param1_grid));
 
 figure;
 surf(panels, battery, Z');
-xlabel('Number of Panels');
-ylabel('Battery Capacity [kWh]');
-zlabel('Grid Energy [kWh]');
-title('Delivered energy to the grid vs. battery capacity and solar panels');
+xlabel('Number of Panels', 'FontSize', FontSize);
+ylabel('Battery cap. [kWh]', 'FontSize', FontSize);
+zlabel('Grid Energy [kWh]', 'FontSize', FontSize);
+title('Delivered grid energy vs. battery cap. & PV panels', 'FontSize', TitleSize);
 
 colormap(parula);          % Vibrant colormap
 colorbar;                 % Show color scale
@@ -68,7 +68,7 @@ camlight headlight;       % Add lighting
 lighting gouraud;         % Soft lighting model
 view(135, 30);            % Set a good viewing angle
 
-filename = "3D_Sizing_GridDelivered.png";
+filename = "Big_3D_Sizing_GridDelivered.png";
 ax.Toolbar = [];
 saveas(gcf, fullfile(foldername, filename));
 
@@ -78,18 +78,18 @@ Z = reshape(HyProd, size(param1_grid));
 
 figure;
 surf(panels, battery, Z');
-xlabel('Number of Panels');
-ylabel('Battery Capacity [kWh]');
-zlabel('Hydrogen produced [kg]');
-title('Produced hydrogen vs. battery capacity and solar panels');
+xlabel('Number of Panels', 'FontSize', FontSize);
+ylabel('Battery cap. [kWh]', 'FontSize', FontSize);
+zlabel('Hydrogen produced [kg]', 'FontSize', FontSize);
+title('Prod. hydrogen vs. battery cap. & PV panels', 'FontSize', TitleSize);
 
-colormap(parula);          % Vibrant colormap
+colormap(parula);         % Vibrant colormap
 colorbar;                 % Show color scale
 camlight headlight;       % Add lighting
 lighting gouraud;         % Soft lighting model
 view(135, 30);            % Set a good viewing angle
 
-filename = '3D_Sizing_HyProd.png';
+filename = 'Big_3D_Sizing_HyProd.png';
 ax.Toolbar = [];
 saveas(gcf, fullfile(foldername, filename));
 
@@ -99,10 +99,10 @@ Z = reshape(HyCons, size(param1_grid));
 
 figure;
 surf(panels, battery, Z');
-xlabel('Number of Panels');
-ylabel('Battery Capacity [kWh]');
-zlabel('Hydrogen consumed [kg]');
-title('Consumed hydrogen vs. battery capacity and solar panels');
+xlabel('Number of Panels', 'FontSize', FontSize);
+ylabel('Battery cap. [kWh]', 'FontSize', FontSize);
+zlabel('Hydrogen consumed [kg]', 'FontSize', FontSize);
+title('Cons. hydrogen vs. battery cap. & PV panels', 'FontSize', TitleSize);
 
 colormap(parula);          % Vibrant colormap
 colorbar;                 % Show color scale
@@ -110,7 +110,7 @@ camlight headlight;       % Add lighting
 lighting gouraud;         % Soft lighting model
 view(135, 30);            % Set a good viewing angle
 
-filename = "3D_Sizing_HyCons.png";
+filename = "Big_3D_Sizing_HyCons.png";
 ax.Toolbar = [];
 saveas(gcf, fullfile(foldername, filename));
 
@@ -151,11 +151,11 @@ Z = reshape(grid_pulled, size(param1_grid));
 % 3D surface plot
 figure;
 surf(StartSoC, StopSoC, Z');
-xlabel('Starting SoC [%]');
-ylabel('Stopping SoC [%]');
-zlabel('Grid Energy [kWh]');
+xlabel('Starting SoC [%]', 'FontSize', FontSize);
+ylabel('Stopping SoC [%]', 'FontSize', FontSize);
+zlabel('Grid Energy [kWh]', 'FontSize', FontSize);
 zlim([min(grid_pulled)*0.95, max(grid_pulled)*1.05])
-title('Pulled energy from the grid vs. fuel cell stopping and starting settings');
+title('Pulled grid energy vs. FC EMS settings', 'FontSize', TitleSize);
 
 colormap(parula);          % Vibrant colormap
 colorbar;                 % Show color scale
@@ -163,7 +163,7 @@ camlight headlight;       % Add lighting
 lighting gouraud;         % Soft lighting model
 view(135, 30);            % Set a good viewing angle
 
-filename = "3D_FCTest_GridPulled.png";
+filename = "Big_3D_FCTest_GridPulled.png";
 ax.Toolbar = [];
 saveas(gcf, fullfile(foldername, filename));
 
@@ -174,11 +174,11 @@ Z = reshape(grid_delivered, size(param1_grid));
 
 figure;
 surf(StartSoC, StopSoC, Z');
-xlabel('Starting SoC [%]');
-ylabel('Stopping SoC [%]');
-zlabel('Grid Energy [kWh]');
+xlabel('Starting SoC [%]', 'FontSize', FontSize);
+ylabel('Stopping SoC [%]', 'FontSize', FontSize);
+zlabel('Grid Energy [kWh]', 'FontSize', FontSize);
 zlim([min(grid_delivered)*0.95, max(grid_delivered)*1.05])
-title('Delivered energy to the grid vs. fuel cell stopping and starting settings');
+title('Delivered grid energy vs. FC EMS settings', 'FontSize', TitleSize);
 
 colormap(parula);          % Vibrant colormap
 colorbar;                 % Show color scale
@@ -186,7 +186,7 @@ camlight headlight;       % Add lighting
 lighting gouraud;         % Soft lighting model
 view(135, 30);            % Set a good viewing angle
 
-filename = "3D_FCTest_GridDelivered.png";
+filename = "Big_3D_FCTest_GridDelivered.png";
 ax.Toolbar = [];
 saveas(gcf, fullfile(foldername, filename));
 
@@ -196,11 +196,11 @@ Z = reshape(HyProd, size(param1_grid));
 
 figure;
 surf(StartSoC, StopSoC, Z');
-xlabel('Starting SoC [%]');
-ylabel('Stopping SoC [%]');
-zlabel('Hydrogen produced [kg]');
+xlabel('Starting SoC [%]', 'FontSize', FontSize);
+ylabel('Stopping SoC [%]', 'FontSize', FontSize);
+zlabel('Hydrogen produced [kg]', 'FontSize', FontSize);
 zlim([min(HyProd)*0.95, max(HyProd)*1.05])
-title('Produced hydrogen vs. fuel cell stopping and starting settings');
+title('Prod. hydrogen vs. FC EMS settings', 'FontSize', TitleSize);
 
 colormap(parula);          % Vibrant colormap
 colorbar;                 % Show color scale
@@ -208,7 +208,7 @@ camlight headlight;       % Add lighting
 lighting gouraud;         % Soft lighting model
 view(135, 30);            % Set a good viewing angle
 
-filename = "3D_FCTest_HyProd.png";
+filename = "Big_3D_FCTest_HyProd.png";
 ax.Toolbar = [];
 saveas(gcf, fullfile(foldername, filename));
 
@@ -219,11 +219,11 @@ Z = reshape(HyCons, size(param1_grid));
 
 figure;
 surf(StartSoC, StopSoC, Z');
-xlabel('Starting SoC [%]');
-ylabel('Stopping SoC [%]');
-zlabel('Hydrogen consumed [kg]');
+xlabel('Starting SoC [%]', 'FontSize', FontSize);
+ylabel('Stopping SoC [%]', 'FontSize', FontSize);
+zlabel('Hydrogen consumed [kg]', 'FontSize', FontSize);
 zlim([min(HyCons)*0.95, max(HyCons)*1.05])
-title('Consumed hydrogen vs. fuel cell stopping and starting settings');
+title('Cons. hydrogen vs. FC EMS settings', 'FontSize', TitleSize);
 
 colormap(parula);          % Vibrant colormap
 colorbar;                 % Show color scale
@@ -231,12 +231,12 @@ camlight headlight;       % Add lighting
 lighting gouraud;         % Soft lighting model
 view(135, 30);            % Set a good viewing angle
 
-filename = "3D_FCTest_HyCons.png";
+filename = "Big_3D_FCTest_HyCons.png";
 ax.Toolbar = [];
 saveas(gcf, fullfile(foldername, filename));
 
 
-%% Results of the Electrolyser Tests: Starting SoC and Hour
+%% Results of the Electrolyser Tests: Starting SoC & Hour
 
 StartSoC = [60, 70, 80];
 StartHr  = [12, 13, 14, 15];
@@ -269,11 +269,11 @@ Z = reshape(grid_pulled, size(param1_grid));
 % 3D surface plot
 figure;
 surf(StartSoC, StartHr, Z');
-xlabel('Starting SoC [%]');
-ylabel('Starting hour [h]');
-zlabel('Grid Energy [kWh]');
+xlabel('Starting SoC [%]', 'FontSize', FontSize);
+ylabel('Starting hour [h]', 'FontSize', FontSize);
+zlabel('Grid Energy [kWh]', 'FontSize', FontSize);
 zlim([min(grid_pulled)*0.95, max(grid_pulled)*1.05])
-title('Pulled energy from the grid vs. electrolyser starting hour and state of charge settings');
+title('Pulled grid energy vs. Elec EMS settings', 'FontSize', TitleSize);
 
 colormap(parula);          % Vibrant colormap
 colorbar;                 % Show color scale
@@ -281,7 +281,7 @@ camlight headlight;       % Add lighting
 lighting gouraud;         % Soft lighting model
 view(135, 30);            % Set a good viewing angle
 
-filename = "3D_ElecTest_GridPulled.png";
+filename = "Big_3D_ElecTest_GridPulled.png";
 ax.Toolbar = [];
 saveas(gcf, fullfile(foldername, filename));
 
@@ -291,11 +291,11 @@ Z = reshape(grid_delivered, size(param1_grid));
 
 figure;
 surf(StartSoC, StartHr, Z');
-xlabel('Starting SoC [%]');
-ylabel('Starting hour [h]');
-zlabel('Grid Energy [kWh]');
+xlabel('Starting SoC [%]', 'FontSize', FontSize);
+ylabel('Starting hour [h]', 'FontSize', FontSize);
+zlabel('Grid Energy [kWh]', 'FontSize', FontSize);
 zlim([min(grid_delivered)*0.95, max(grid_delivered)*1.05])
-title('Delivered energy to the grid vs. electrolyser starting hour and state of charge settings');
+title('Delivered grid energy vs. Elec EMS settings', 'FontSize', TitleSize);
 
 colormap(parula);          % Vibrant colormap
 colorbar;                 % Show color scale
@@ -303,7 +303,7 @@ camlight headlight;       % Add lighting
 lighting gouraud;         % Soft lighting model
 view(135, 30);            % Set a good viewing angle
 
-filename = "3D_ElecTest_GridDelivered.png";
+filename = "Big_3D_ElecTest_GridDelivered.png";
 ax.Toolbar = [];
 saveas(gcf, fullfile(foldername, filename));
 
@@ -313,11 +313,11 @@ Z = reshape(HyProd, size(param1_grid));
 
 figure;
 surf(StartSoC, StartHr, Z');
-xlabel('Starting SoC [%]');
-ylabel('Starting hour [h]');
-zlabel('Hydrogen produced [kg]');
+xlabel('Starting SoC [%]', 'FontSize', FontSize);
+ylabel('Starting hour [h]', 'FontSize', FontSize);
+zlabel('Hydrogen produced [kg]', 'FontSize', FontSize);
 zlim([min(HyProd)*0.95, max(HyProd)*1.05])
-title('Produced hydrogen vs. electrolyser starting hour and state of charge settings');
+title('Prod. hydrogen vs. Elec EMS settings', 'FontSize', TitleSize);
 
 colormap(parula);          % Vibrant colormap
 colorbar;                 % Show color scale
@@ -325,22 +325,20 @@ camlight headlight;       % Add lighting
 lighting gouraud;         % Soft lighting model
 view(135, 30);            % Set a good viewing angle
 
-filename = "3D_ElecTest_HyProd.png";
+filename = "Big_3D_ElecTest_HyProd.png";
 ax.Toolbar = [];
 saveas(gcf, fullfile(foldername, filename));
-
-
 
 % Grid delivered
 Z = reshape(HyCons, size(param1_grid));
 
 figure;
 surf(StartSoC, StartHr, Z');
-xlabel('Starting SoC [%]');
-ylabel('Starting hour [h]');
-zlabel('Hydrogen consumed [kg]');
+xlabel('Starting SoC [%]', 'FontSize', FontSize);
+ylabel('Starting hour [h]', 'FontSize', FontSize);
+zlabel('Hydrogen consumed [kg]', 'FontSize', FontSize);
 zlim([min(HyCons)*0.95, max(HyCons)*1.05])
-title('Consumed hydrogen vs. electrolyser starting hour and state of charge settings');
+title('Cons. hydrogen vs. Elec EMS settings', 'FontSize', TitleSize);
 
 colormap(parula);          % Vibrant colormap
 colorbar;                 % Show color scale
@@ -348,7 +346,7 @@ camlight headlight;       % Add lighting
 lighting gouraud;         % Soft lighting model
 view(135, 30);            % Set a good viewing angle
 
-filename = "3D_ElecTest_HyCons.png";
+filename = "Big_3D_ElecTest_HyCons.png";
 ax.Toolbar = [];
 saveas(gcf, fullfile(foldername, filename));
 
@@ -378,42 +376,42 @@ end
 
 figure;
 plot(StopSoC, grid_pulled, LineWidth = 2);
-xlabel('Stopping SoC [%]');
-ylabel('Grid Energy [kWh]');
-title('Pulled energy from the grid vs. electrolyser stopping state of charge settings');
+xlabel('Stopping SoC [%]', 'FontSize', FontSize);
+ylabel('Grid Energy [kWh]', 'FontSize', FontSize);
+title('Pulled grid energy vs. Elec stopping EMS settings', 'FontSize', TitleSize);
 
-filename = "2D_ElecTest_GridPulled.png";
+filename = "Big_2D_ElecTest_GridPulled.png";
 ax.Toolbar = [];
 saveas(gcf, fullfile(foldername, filename));
 
 
 figure;
 plot(StopSoC, grid_delivered, LineWidth = 2);
-xlabel('stopping SoC [%]');
-ylabel('Grid energy [kWh]');
-title('Delivered energy to the grid vs. electrolyser stopping state of charge settings');
+xlabel('stopping SoC [%]', 'FontSize', FontSize);
+ylabel('Grid energy [kWh]', 'FontSize', FontSize);
+title('Delivered grid energy vs. Elec stopping EMS settings', 'FontSize', TitleSize);
 
-filename = "2D_ElecTest_GridDelivered.png";
+filename = "Big_2D_ElecTest_GridDelivered.png";
 ax.Toolbar = [];
 saveas(gcf, fullfile(foldername, filename));
 
 figure;
 plot(StopSoC, HyProd, LineWidth = 2, Color = 'r');
-xlabel('Stopping SoC [%]');
-ylabel('Hydrogen Produced [kg]');
-title('Produced hydrogen vs. electrolyser stopping state of charge settings');
+xlabel('Stopping SoC [%]', 'FontSize', FontSize);
+ylabel('Hydrogen Produced [kg]', 'FontSize', FontSize);
+title('Prod. hydrogen vs. Elec stopping EMS settings', 'FontSize', TitleSize);
 
-filename = "2D_ElecTest_HyProd.png";
+filename = "Big_2D_ElecTest_HyProd.png";
 ax.Toolbar = [];
 saveas(gcf, fullfile(foldername, filename));
 
 
 figure;
 plot(StopSoC, HyCons, LineWidth = 2, Color = 'b');
-xlabel('Stopping SoC [%]');
-ylabel('Hydrogen consumed [kg]');
-title('Consumed hydrogen vs. electrolyser stopping state of charge settings');
+xlabel('Stopping SoC [%]', 'FontSize', FontSize);
+ylabel('Hydrogen consumed [kg]', 'FontSize', FontSize);
+title('Cons. hydrogen vs. Elec stopping EMS settings', 'FontSize', TitleSize);
 
-filename = "2D_ElecTest_HyCons.png";
+filename = "Big_2D_ElecTest_HyCons.png";
 ax.Toolbar = [];
 saveas(gcf, fullfile(foldername, filename));

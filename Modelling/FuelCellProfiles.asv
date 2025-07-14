@@ -1,0 +1,96 @@
+clear; clc;
+
+%% --- Load measured Fuel cell power CSV ---
+
+FuelCell = readtable('SSS-Fuel-dec-jan.csv');
+
+filteredAC = FuelCell(strcmp(FuelCell{:,5}, 'Inverter AC Power'), :);
+filteredStackH2 = FuelCell(strcmp(FuelCell{:,5}, 'Stack Hydrogen Inlet Flow'), :);
+
+
+FuelCellTime = datetime(filteredAC.time, ...
+    'InputFormat', 'yyyy-MM-dd''T''HH:mm:ss.SSS''Z''', ...
+    'TimeZone', 'UTC');
+
+HydrogenTime = datetime(filteredStackH2.time, ...
+    'InputFormat', 'yyyy-MM-dd''T''HH:mm:ss.SSS''Z''', ...
+    'TimeZone', 'UTC');
+
+FuelCellPower = double(filteredAC.value_float);
+FuelCellHydrogen = double(filteredStackH2.value_float);
+
+FuelCellTable = table(FuelCellTime, FuelCellPower, 'VariableNames', {'time', 'hydrogen'});
+HyTable = table(HydrogenTime, FuelCellHydrogen, 'VariableNames', {'time', 'hydrogen'});
+
+
+%% --- Filter measured data by date range ---
+
+start_date = datetime(2025,1,2,0,0,0,'TimeZone','UTC');
+end_date   = datetime(2025,1,3,0,0,0,'TimeZone','UTC');
+
+idxP = (FuelCellTable.time >= start_date) & (FuelCellTable.time <= end_date);
+PowerFiltered = FuelCellTable(idxP,:);
+
+idxP = (HyTable.time >= start_date) & (HyTable.time <= end_date);
+HyFiltered = HyTable(idxP,:);
+
+
+%% --- Load Simulink model output ---
+
+modelname = "TGV_EnergyHub_12_PVPanels_300_Ah_Battery.mat";
+modeldata = load(modelname);
+
+data1 = modeldata.results.PowerComponents.Data(:,1);   % Simulated power
+data2 = modeldata.results.Hydrogen.Data(:,6);          % Simulated hydrogen
+
+time1 = modeldata.results.PowerComponents.time;        % Seconds
+time2 = modeldata.results.Hydrogen.time;
+
+% Convert simulation time (in seconds) to datetime
+simStart = datetime(2025,1,1,0,0,0,'TimeZone','UTC');
+
+simTime1 = simStart; + seconds(time1);
+simTime2 = simStart; + seconds(time2);
+
+% --- Plotting
+
+TitleSize = 22;
+LabelSize = 16;
+AxisSize = 16;
+LegendSize = 16;
+
+clr = {'red', 'cyan'};
+minlim = 0;
+maxlim = 2500;
+
+figure('Position', [100 100 1000 600]); hold on;
+
+% Simulated data
+plot(simTime1, data1, 'LineWidth', 3, 'Color', clr{1}, 'DisplayName', 'Simulated power');
+plot(simTime2, data2, 'LineWidth', 3, 'Color', clr{2}, 'DisplayName', 'Simulated hydrogen');
+
+% Measured data (dashed lines)
+plot(PowerFiltered.time, PowerFiltered.power, '--', 'LineWidth', 2, ...
+     'Color', [0.8 0 0], 'DisplayName', 'Measured power');
+plot(HydrogenFiltered.time, HydrogenFiltered.hydrogen, '--', 'LineWidth', 2, ...
+     'Color', [0 0.6 0.8], 'DisplayName', 'Measured hydrogen');
+
+% Plot settings
+title('Electrolyser Power Consumption and Hydrogen Production', 'FontSize', TitleSize)
+xlabel('Time [HH:MM]', 'FontSize', LabelSize)
+ylabel('Power [W] / Hydrogen Flow [NL/h]', 'FontSize', LabelSize)
+ylim([minlim maxlim])
+xlim([start_date end_date])
+grid on;
+
+% Format x-axis
+ax = gca;
+ax.XAxis.FontSize = AxisSize;
+ax.YAxis.FontSize = AxisSize;
+ax.XTick = linspace(start_date, end_date, 13);  % 2-hour intervals
+ax.XTickLabelRotation = 45;
+datetick('x', 'HH:MM', 'keepticks');  % Optional: force time labels
+
+legend('Location', 'northwest', 'FontSize', LegendSize);
+
+hold off;

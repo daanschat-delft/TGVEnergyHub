@@ -1,19 +1,17 @@
 %% Results
 
-TitleSize = 21;
-FontSize = 14;
+TitleSize = 22;
+FontSize = 18;
 cmap = parula(10);
-panels = 18;
-battery = 600;
 
 % From this point, the results are visualised and calculated
 % First the results are loaded
 
 %test = 1;
-%panels = 21;    % 12, 15,  18,  21
-%battery = 600;  % 150, 300, 600
+panels = SolarPanels;    % 12, 15,  18,  21
+battery = BatteryCapacity;  % 150, 300, 600
 
-%EMSElecStartSoC = 70; % 60, 70, 80
+%EMSElecStartSoC = 70; % 60, 70,80
 %EMSElecStopSoC =  65; % 45, 50, 55, 60, 65,  EMSElecStartSoC-[5 10 15 20 25];
 %EMSElecStartHr = 15; % 12, 13, 14, 15
 
@@ -23,8 +21,11 @@ battery = 600;
 
 %name = sprintf('InfHydrogen%d_Panels_%d_Ah.mat', panels, battery);
 %name = sprintf('NoHydrogenIntegration%d_Panels_%d_Ah.mat', panels, battery);
+name = sprintf('Entire_TGV_Campus_%d_Panels_%d_Battery.mat', param1, param2);
 %name = sprintf('TGV_EnergyHub_%d_PVPanels_%d_Ah_Battery.mat', panels, battery);
 %name = sprintf('IMPR_V4_EnergyHub_%d_PVPanels_%d_Ah_Battery.mat', panels, battery);
+%name = sprintf('Edge_Demand_V2_EnergyHub_%d_PVPanels_%d_Ah_Battery.mat', panels, battery);
+%name = sprintf('Edge_PV_V1_EnergyHub_%d_PVPanels_%d_Ah_Battery.mat', panels, battery);
 %name = sprintf('EMS_Test_%d_StartSoC_%d_StartHr.mat', EMSElecStartSoC, EMSElecStartHr);
 %name = sprintf('EMS_FCTest_%d_StartSoC_%d_StopSoC.mat', EMSFCStartSoC, EMSFCStopSoC);
 %name = sprintf('EMS_Test_%d_StartSoC_%d_StopSoC.mat', EMSElecStartSoC, EMSElecStopSoC);
@@ -34,9 +35,11 @@ load(name)
 
 %% Plotting Hydrogen Bufffer
 
-%foldername = sprintf('Output/TGV_Test_%d_%d', panels, battery);
+%foldername = sprintf('Output/IECON_TGV_Test_%d_%d', panels, battery);
+foldername = sprintf('Output/TGV_Campus_%d_%d', panels, battery);
 %foldername = sprintf('Output/InfHydrogen_Test_%d_%d', panels, battery);
-foldername = sprintf('Output/IMPR_V4_Test_%d_%d', panels, battery);
+%foldername = sprintf('Output/Edge_PV_V1_Test_%d_%d', panels, battery);
+%foldername = sprintf('Output/Edge_Demand_V2_Test_%d_%d', panels, battery);
 %foldername = sprintf('Output/NoHydrogen_Test_%d_%d', panels, battery);
 %foldername = sprintf('Output/EMS_Test_Elec_%d_%d', EMSElecStartSoC, EMSElecStartHr);
 %foldername = sprintf('Output/EMS_Test_Elec_%d_%d_StopSoC', EMSElecStartSoC, EMSElecStopSoC);
@@ -113,7 +116,7 @@ ax.XAxis.FontSize = FontSize;
 ax.YAxis.FontSize = FontSize;
 xticks(xtick_positions);
 xticklabels(month_labels);
-legend('Battery state of charge [%]','Hydrogen buffer state of charge [%]','Minimum SoC','Fuel cell turns on SoC','Fuel cell turns off SoC','Location', 'northeast', 'FontSize', FontSize);
+legend('Battery state of charge [%]','Hydrogen buffer state of charge [%]','Minimum SoC','Fuel cell turns on SoC','Fuel cell turns off SoC','Location', 'northwest', 'FontSize', FontSize);
 
 filename = sprintf('%d_%d_%s', panels, battery, "SoCs");
 ax.Toolbar = [];
@@ -169,9 +172,6 @@ saveas(gcf, fullfile(foldername, [filename '.png']));
 
 
 %% Plotting Grid Power Exchange
-
-TitleSize = 18;
-FontSize = 14;
 
 data = [results.Grid.Data(:,1)   results.Grid.Data(:,2)];
 time = results.Grid.time;
@@ -508,3 +508,12 @@ fprintf("Grid energy delivered in kWh: %.2f\n", max(results.Grid.Data(:,3)))
 fprintf("Grid energy pulled in kWh: %.2f\n\n", max(results.Grid.Data(:,4)))
 
 %fprintf("Hydrogen Left in Buffer: %.2f\n", results.Hydrogen.Data(:, end))
+
+%% Efficiency
+
+in = max(results.PV_Demand.Data(:,2)) + max(results.Grid.Data(:,4)); % PV + Grid pulled
+out = max(results.PV_Demand.Data(:,4))+ max(results.Grid.Data(:,3)); % Demand + Grid Delivered
+out2 = max(results.PV_Demand.Data(:,4)); % Demand only
+
+efficiency = 100*out/in
+efficiency2 = 100*out2/(in-max(results.Grid.Data(:,3)))
